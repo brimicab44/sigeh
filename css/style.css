@@ -10262,6 +10262,22 @@ textarea {
     transition: background 0.1s ease-in-out, color 0.3s ease-in-out, transform 0.1s ease-in-out; /* Añade una transición para transform */
   }
   
+  a.read-more3 {
+    margin-top: auto;
+    display: inline-block;
+    padding: 10px 40px;
+    background: transparent;
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    cursor: default;
+}
+
+
 
     
       .post-entry-alt {

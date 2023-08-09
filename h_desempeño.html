@@ -8,27 +8,16 @@
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
-
-	
-	
-
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-
-
-	
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
 	<link rel="stylesheet" href="css/tiny-slider.css">
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/glightbox.min.css">
 	<link rel="stylesheet" href="css/style.css">
-
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 
 
@@ -73,7 +62,7 @@
 			</div>
 		</div>
 	</nav>
-	<nav class="site-nav nav-bottom" >
+  <nav class="site-nav nav-bottom" >
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
@@ -88,33 +77,33 @@
 							</form>-->
 
 							<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-								<li><a href="index.html">Inicio</a></li>
-								<li><a href="h_productos.html#solicitud">Solicitud de Productos</a></li>
+								<li class="active"><a href="index.html" class="subrayado">Inicio</a></li>
+								<li><a href="h_productos.html#solicitud" class="subrayado">Solicitud de Productos</a></li>
 								<li class="has-children">
-									<a href="h_mapas.html">Mapas</a>
+									<a href="h_mapas.html" class="subrayado">Mapas</a>
 									<ul class="dropdown">
 										<li>
-											<a href="h_mapas.html">Hidalgo en Mapas</a>
+											<a href="h_mapas.html" class="subrayado2">Hidalgo en Mapas</a>
 										</li>
-										<li ><a href="search-result.html" style="color: orange; cursor:default;">Atlas interactivo del estado de Hidalgo</a></li>
+										<li ><a href="search-result.html" style="color: orange; cursor:default;" class="subrayado2">Atlas interactivo del estado de Hidalgo</a></li>
 									</ul>
 								</li>
 								<li class="has-children">
-									<a>Estadísticas</a>
+									<a class="subrayado">Estadísticas</a>
 									<ul class="dropdown">
-										<li><a href="h_desempeño.html">Desempeño de Gobierno</a></li>
+										<li><a href="h_desempeño.html" class="subrayado2">Desempeño de Gobierno</a></li>
 										<ul class="dropdown"></ul>
 										<li class="has-children">				
-											<a href="h_numeros.html">Hidalgo en Números</a>
+											<a href="h_numeros.html" class="subrayado2">Hidalgo en Números</a>
 											<ul class="dropdown">
-												<li><a href="pags/tableros.html">Tableros dinámicos</a></li>
-												<li><a href="pags/infografias.html">Infografías municipales</a></li>
+												<li><a href="h_tableros.html">Tableros dinámicos</a></li>
+												<li><a href="maps/infografias.html">Infografías municipales</a></li>
 												<li><a href="pags/bui.html">Banco único de Información Estadística</a></li>
 											</ul>
 										</li>
 									</ul>
 								</li>
-								<li><a href="h_normatividad.html">Marco Normativo</a></li>
+								<li><a href="h_normatividad.html" class="subrayado">Marco Normativo</a></li>
 								
 						</div>
 						<div class="col-2 text-end">
@@ -133,7 +122,7 @@
 	</nav>
 <!-- BANNER -->
 <!--<div class="banner"></div>-->
-<div class="site-cover2 site-cover2-sm same-height overlay single-page" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/numeros.jpg') no-repeat center; background-size: cover; cursor: default;">
+<div class="site-cover2 site-cover2-sm same-height overlay single-page" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/desempeño2.jpg') no-repeat center; background-size: cover; cursor: default;">
 	<div class="container">
 	  <div class="row same-height justify-content-center">
 		<div class="col-md-6">
@@ -150,281 +139,231 @@
   
   <section class="section">
     <div class="container">
-      <h2>Indicadores Nacionales</h2>
-      <hr class="customhr">
-      <h6>Selecciona una categoría:</h6>
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <img src="images/logos/seguridad.png" alt="Icono" class="icono-imagen">
-                  Seguridad
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="list-group">
-                        <a href="pags/indi_nacional.php?idr=74" class="list-group-item list-group-item-action">Tasa delictiva (100 mil hab)</a>
-                        <a href="pags/indi_nacional.php?idr=75" class="list-group-item list-group-item-action">Defunciones por accidente</a>
-                        <a href="pags/indi_nacional.php?idr=76" class="list-group-item list-group-item-action">Incidencia delictiva del fuero común</a>
-                        <a href="pags/indi_nacional.php?idr=77" class="list-group-item list-group-item-action">Homicidios</a>
-                        <a href="pags/indi_nacional.php?idr=78" class="list-group-item list-group-item-action">Secuestro</a>
-                        <a href="pags/indi_nacional.php?idr=79" class="list-group-item list-group-item-action">Extorsión</a>
-                        <a href="pags/indi_nacional.php?idr=80" class="list-group-item list-group-item-action">Narco-menudeo</a>
-                        <a href="pags/indi_nacional.php?idr=81" class="list-group-item list-group-item-action">Robo a vehículo</a>
-                        <a href="pags/indi_nacional.php?idr=82" class="list-group-item list-group-item-action">Robo a casa</a>
-                        <a href="pags/indi_nacional.php?idr=83" class="list-group-item list-group-item-action">Robo a negocio</a>
-                        <a href="pags/indi_nacional.php?idr=84" class="list-group-item list-group-item-action">Lesiones</a>
-                        <a href="pags/indi_nacional.php?idr=85" class="list-group-item list-group-item-action">Violación</a>
-                        <a href="pags/indi_nacional.php?idr=86" class="list-group-item list-group-item-action">Violencia familiar</a>
-                        <a href="pags/indi_nacional.php?idr=87" class="list-group-item list-group-item-action">Feminicidio</a>
-                        <a href="pags/indi_nacional.php?idr=88" class="list-group-item list-group-item-action">Índice de datos sobre himicidios</a>
-                        <a href="pags/indi_nacional.php?idr=89" class="list-group-item list-group-item-action">Índice global de impunidad 2018</a>
-                        <a href="pags/indi_nacional.php?idr=91" class="list-group-item list-group-item-action">Percepción de seguridad pública</a>
-                        <a href="pags/indi_nacional.php?idr=92" class="list-group-item list-group-item-action">Tasa de prevalencia delictiva</a>
-                        <a href="pags/indi_nacional.php?idr=93" class="list-group-item list-group-item-action">Tasa de víctimas</a>
-                        <a href="pags/indi_nacional.php?idr=94" class="list-group-item list-group-item-action">Porcentaje de delitos denunciados</a>
-                        <a href="pags/indi_nacional.php?idr=95" class="list-group-item list-group-item-action">Porcentaje de averiguaciones previas abiertas</a>
-                        <a href="pags/indi_nacional.php?idr=96" class="list-group-item list-group-item-action">Cifra negra</a>
-                        <a href="pags/indi_nacional.php?idr=97" class="list-group-item list-group-item-action">Percepción social sobre inseguridad pública por ciudad de interés (Pachuca de Soto, Hidalgo)</a>
-                        <a href="pags/indi_nacional.php?idr=98" class="list-group-item list-group-item-action">Percepción de la población sobre la efectividad del Gobierno de su ciudad (Pachuca de Soto, Hidalgo) para resolver las principales problemáticas</a>
-                        <a href="pags/indi_nacional.php?idr=100" class="list-group-item list-group-item-action">Semáforo de ejecuciones</a>
-                    </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <img src="images/logos/campo.png" alt="Icono" class="icono-imagen">
-                  Campo
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action">Superficie sembrada</a>
-                        <a href="#" class="list-group-item list-group-item-action">Superficie cosechada</a>
-                        <a href="#" class="list-group-item list-group-item-action">Valor de producción</a>
-                        <a href="#" class="list-group-item list-group-item-action">Ganado Bovino</a>
-                        <a href="#" class="list-group-item list-group-item-action">Ganado Porcino</a>
-                        <a href="#" class="list-group-item list-group-item-action">Ganado Ovino</a>
-                        <a href="http://sigeh.hidalgo.gob.mx/post/predios/" class="list-group-item list-group-item-action">Ganado Caprino</a>
-                        <a href="#" class="list-group-item list-group-item-action">Aves</a>
-                        <a href="#" class="list-group-item list-group-item-action">Guajolotes</a>
-                        <a href="#" class="list-group-item list-group-item-action">Leche de Bovino</a>
-                        <a href="#" class="list-group-item list-group-item-action">Huevo para plato</a>
-                        <a href="#" class="list-group-item list-group-item-action">Miel</a>
-                        <a href="#" class="list-group-item list-group-item-action">Producción pesquera</a>
-                      </div>
-                
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <img src="images/logos/social.png" alt="Icono" class="icono-imagen">
-                  Desarrollo Social
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action">Grado de intensidad Migratoria</a>
-                  <a href="#" class="list-group-item list-group-item-action">Carencia por calidad y espacios en la vivienda</a>
-                  <a href="#" class="list-group-item list-group-item-action">Carencia por acceso a los servicios de salud</a>
-                  <a href="#" class="list-group-item list-group-item-action">Carencia por acceso a la alimentación</a>
-                  <a href="#" class="list-group-item list-group-item-action">Carencia por acceso a a la seguridad social</a>
-                  <a href="#" class="list-group-item list-group-item-action">Carencia por acceso a los servicios básicos en la vivienda</a>
-                  <a href="http://sigeh.hidalgo.gob.mx/post/predios/" class="list-group-item list-group-item-action">Índice de Desarrollo Humano IDH</a>
-                  <a href="#" class="list-group-item list-group-item-action">Índice Estatal de Capacidades para el Desarrollo Social IDES</a>
-                  <a href="#" class="list-group-item list-group-item-action">Pobreza</a>
-                  <a href="#" class="list-group-item list-group-item-action">Pobreza etrema</a>
-                  <a href="#" class="list-group-item list-group-item-action">Población Vulnerable por ingresos</a>
-                  <a href="#" class="list-group-item list-group-item-action">Rezago educativo</a>
-                  <a href="#" class="list-group-item list-group-item-action">Población con ingreso inferior a la línea de pobreza por ingresos</a>
-                  <a href="#" class="list-group-item list-group-item-action">Índice de marginación</a>
-                  <a href="#" class="list-group-item list-group-item-action">índice de rezago social</a>
-                  <a href="#" class="list-group-item list-group-item-action">Índice de Progreso Social (IPS)</a>
+      <p>Seleccione un tema para visualizar su tablero</p>
+      <hr>
+      <div class="row">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col" id="openFullScreenLink">
+          <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff);  color: black;">
+              <a href="pags/tablero.php?id=3">
+              <div class="card-body">
+                 <div class="row g-0">
+                <div class="col-2">
+                  <img src="images/logos/social.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
                 </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <img src="images/logos/salud.png" alt="Icono" class="icono-imagen">
-                    Salud
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Porcentaje de población afiliada a servicios de salud</a>
-                    <a href="#" class="list-group-item list-group-item-action">Personal médico</a>
-                    <a href="#" class="list-group-item list-group-item-action">Unidades médicas</a>
-                    <a href="#" class="list-group-item list-group-item-action">Mortalidad materna (casos)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa Global de Fecundidad</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Mortalidad infantil (Proyección)</a>
-                    <a href="http://sigeh.hidalgo.gob.mx/post/predios/" class="list-group-item list-group-item-action">Índice de Paz México</a>
-                    <a href="#" class="list-group-item list-group-item-action">Mortalidad Materna (casos)</a>
-                  </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Seguridad</h6>
+                  <p class="card-text" style="margin-left: 20px;">Tasa delictiva, defunciones, robos...</p>	 		
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSix">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    <img src="images/logos/turismo.png" alt="Icono" class="icono-imagen">
-                    Turismo
-                  </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Establecimientos de hospedaje</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cuartos de Establecimientos de hospedaje</a>
-                    <a href="#" class="list-group-item list-group-item-action">Llegada de Turistas totales a la entidad</a>
-                    <a href="#" class="list-group-item list-group-item-action">Llegada de Turistas a la Entidad por tipo de Turismo (extranjeros)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Oferta de alojamiento en la Entidad (Cuartos)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Porcentaje de ocupación en la Entidad con respecto al porcentaje de ocupación nacional</a>
-                    <a href="http://sigeh.hidalgo.gob.mx/post/predios/" class="list-group-item list-group-item-action">Tasa mensual de desocupación</a>
-                    <a href="#" class="list-group-item list-group-item-action">Establecimiento de hospedaje según categoría (5 estrellas)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Establecimiento de hospedaje según categoría (4 estrellas)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Establecimiento de hospedaje según categoría (3 estrellas)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Establecimiento de hospedaje según categoría (2 estrellas)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Establecimiento de hospedaje según categoría (1 estrella)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Establecimiento de hospedaje según categoría (sin categoría)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cuartos de hospedaje según categoría (5 estrellas)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cuartos de hospedaje según categoría (4 estrellas)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cuartos de hospedaje según categoría (3 estrellas)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cuartos de hospedaje según categoría (2 estrellas)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cuartos de hospedaje según categoría (1 estrella)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cuartos de hospedaje según categoría (Sin categoría)</a>
-                  </div>
                 </div>
+               </div>
+              </a>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSeven">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                    <img src="images/logos/ambiente.png" alt="Icono" class="icono-imagen">
-                    Medio ambiente
-                  </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Plantas de tratamiento de aguas residuales industriales existentes en operación</a>
-                    <a href="#" class="list-group-item list-group-item-action">Emisiones de contaminantes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Áreas naturales protegidas</a>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingEight">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                    <img src="images/logos/movilidad.png" alt="Icono" class="icono-imagen">
-                    Movilidad y conectividad
-                  </button>
-                </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Longitud de la Red carretera federal</a>
-                    <a href="#" class="list-group-item list-group-item-action">Longitud de la Red de alimentadoras estatales</a>
-                    <a href="#" class="list-group-item list-group-item-action">Longitud de la red de caminos rurales</a>
-                    <a href="#" class="list-group-item list-group-item-action">Longitud de la red de brechas mejoradas</a>
-                    <a href="#" class="list-group-item list-group-item-action">Hogares con conexión a internet por entidad federativa</a>
-                    <a href="#" class="list-group-item list-group-item-action">Hogares con computadora por entidad federativa</a>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingNine">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                    <img src="images/logos/vivienda.png" alt="Icono" class="icono-imagen">
-                    Vivienda
-                  </button>
-                </h2>
-                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Carencia por calidad y espacios en la vivienda</a>
-                    <a href="#" class="list-group-item list-group-item-action">Carencia por acceso a los servicios básicos en la vivienda</a>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTen">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                    <img src="images/logos/ciencia.png" alt="Icono" class="icono-imagen">
-                    Ciencia y tecnología
-                  </button>
-                </h2>
-                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Patentes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Investigadores SNI (en proceso)</a>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwelve">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                    <img src="images/logos/finanzas.png" alt="Icono" class="icono-imagen">
-                    Economía y finanzas
-                  </button>
-                </h2>
-                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Crecimiento económico</a>
-                    <a href="#" class="list-group-item list-group-item-action">Informalidad</a>
-                    <a href="#" class="list-group-item list-group-item-action">Empleos Formales Generados Acumulados</a>
-                    <a href="#" class="list-group-item list-group-item-action">Remesas (millones de dólares)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Pobreza Laboral</a>
-                    <a href="#" class="list-group-item list-group-item-action">Productividad Laboral (pesos)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Desigualdad laboral</a>
-                    <a href="#" class="list-group-item list-group-item-action">Producto Interno Bruto (millones de pesos) / Porcentaje de Participación laboral real per cápita, INPC2</a>
-                    <a href="#" class="list-group-item list-group-item-action">Inflación</a>
-                    <a href="#" class="list-group-item list-group-item-action">Doing Bussiness (Apertura de una empresa)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Inversión Extranjera Directa (millones de dólares)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Indicador Trimestral de la Actividad Económica Estatal (ITAEE)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Población Ocupada</a>
-                    <a href="#" class="list-group-item list-group-item-action">Población Desocupada</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Participación</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de desocupación</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Ocupación Parcial y Desocupación</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Presión General</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Trabajo Asalariado</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Subocupación</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Condiciones Críticas de Ocupación</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Informalidad Laboral</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tasa de Ocupación en el Sector Informal</a>
-                    <a href="#" class="list-group-item list-group-item-action">Porcentaje de la Población con Ingreso laboral inferior al costo de la canasta básica</a>
-                    <a href="#" class="list-group-item list-group-item-action">Trabajadores Asegurados permanentes por el IMSS</a>
-                    <a href="#" class="list-group-item list-group-item-action">Población económicamente Activa</a>
-                    <a href="#" class="list-group-item list-group-item-action">Unidades económicas</a>
-                    <a href="#" class="list-group-item list-group-item-action">Personal ocupado</a>
-                    <a href="#" class="list-group-item list-group-item-action">Exportaciones trimestrales de mercancías</a>
-                    <a href="#" class="list-group-item list-group-item-action">Índice de Competitividad estatal</a>
-                    <a href="#" class="list-group-item list-group-item-action">Confianza empresarial (COPARMEX)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Producción bruta total (millones de pesos)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Índice de información presupuestal municipal 2017</a>
-                    <a href="#" class="list-group-item list-group-item-action">Ingresos brutos de los gobiernos de los estados (pesos)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Egresos brutos de los gobiernos de los estados (pesos)</a>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThirteen">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-                    <img src="images/logos/transparencia.png" alt="Icono" class="icono-imagen">
-                    Transparencia
-                  </button>
-                </h2>
-                <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Coeficiente TAI (Transparencia, Anticorrupción e Impunidad Cero)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Índice de Desarrollo Democrático de México (IDDMEX)</a>
-                    <a href="#" class="list-group-item list-group-item-action">Índice de Transparencia y Disponibilidad de la Información Fiscal (ITDIF)</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-              
-              
           </div>
-  </div>
-</section>
+          </div>
+          <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff);  color: black;">
+              <a href="tableros/campo.html">
+              <div class="card-body">
+                <div class="row g-0">
+                <div class="col-2">
+                  <img src="images/logos/marginacion.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Campo</h6>
+                  <p class="card-text" style="margin-left: 20px;">Agricultura, ganadería, piscicultura</p>
+                </div>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+              <a href="pags/tablero.php?id=5">
+              <div class="card-body">
+                <div class="row g-0">
+                <div class="col-2">
+                  
+                    <img src="images/logos/pea.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                  
+                  </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Desarrollo Social</h6>
+                  <p class="card-text" style="margin-left: 20px;">Población Económicamente Activa</p>
+                </div>
+                </div>
+              </div>
+              </a>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+              <a href="pags/tablero.php?id=6">
+              <div class="card-body">
+                <div class="row g-0">
+                <div class="col-2">
+                  
+                    <img src="images/logos/salud.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                  
+                  </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Salud</h6>
+                  <p class="card-text" style="margin-left: 20px;">Indicadores del bienestar físico y mental</p>
+                </div>
+                </div>
+              </div>
+              </a>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+              <a href="pags/tablero.php?id=7">
+              <div class="card-body">
+                <div class="row g-0">
+                <div class="col-2">
+                  
+                    <img src="images/logos/lengua.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                  
+                  </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Turismo</h6>
+                  <p class="card-text" style="margin-left: 20px;">Grupos sociales y culturales que comparten vínculos ancestrales</p>
+                </div>
+                </div>
+              </div>
+              </a>
+              </div>
+            </div>
+            <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+              <a href="pags/tablero.php?id=8">
+              <div class="card-body">
+                <div class="row g-0">
+                <div class="col-2">
+                  
+                    <img src="images/logos/finanzas.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                  
+                  </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Medio Ambiente</h6>
+                  <p class="card-text" style="margin-left: 20px;">Ingresos por remesas en Hidalgo</p>
+                </div>
+                </div>
+              </div>
+              </a>
+              </div>
+            </div>
+            <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+              <a href="pags/tablero.php?id=9">
+              <div class="card-body">
+                <div class="row g-0">
+                  <div class="col-2">
+                    
+                      <img src="images/logos/pobreza.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;">
+                    
+                    </div>
+                  <div class="col-9">
+                    <h6 class="card-title" style="color: black; margin-left: 20px;">Movilidad y conectividad</h6>
+                    <p class="card-text" style="margin-left: 20px;">Mapas personalizados de alta calidad en formato físico o digital</p>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            
+            </div>
+            <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+              <a href="pags/tablero.php?id=10">
+              <div class="card-body">
+                <div class="row g-0">
+                <div class="col-2">
+                  
+                    <img src="images/logos/vivienda.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                  
+                  </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Vivienda</h6>
+                  <p class="card-text" style="margin-left: 20px;">Mapas personalizados de alta calidad en formato físico o digital</p>
+                </div>
+                </div>
+              </div>
+              </a>
+              </div>
+            </div>
+            <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+              <a href="pags/tablero.php?id=11">
+              <div class="card-body">
+                <div class="row g-0">
+                <div class="col-2">
+                  
+                    <img src="images/logos/campo.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                  
+                  </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Ciencia y Tecnología</h6>
+                  <p class="card-text" style="margin-left: 20px;">Mapas personalizados de alta calidad en formato físico o digital</p>
+                </div>
+                </div>
+              </div>
+              </a>
+              </div>
+            </div>
+            <div class="col">
+            <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+              <a href="pags/tablero.php?id=13">
+              <div class="card-body">
+                <div class="row g-0">
+                <div class="col-2">
+                  
+                    <img src="images/logos/educacion.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                  
+                  </div>
+                <div class="col-9">
+                  <h6 class="card-title" style="color: black; margin-left: 20px;">Economía y Finanzas</h6>
+                  <p class="card-text" style="margin-left: 20px;">Mapas personalizados de alta calidad en formato físico o digital</p>
+                </div>
+                </div>
+              </div>
+              </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card w-100 hoverZoom" style="background: linear-gradient(to right, #fff, #fff); color: black;">
+                <a href="pags/tablero.php?id=13">
+                <div class="card-body">
+                  <div class="row g-0">
+                  <div class="col-2">
+                    
+                      <img src="images/logos/educacion.png" alt="Imagen cuadrada" style="width: 100%; height: auto; margin-left: 10px;" >
+                    
+                    </div>
+                  <div class="col-9">
+                    <h6 class="card-title" style="color: black; margin-left: 20px;">Transparencia</h6>
+                    <p class="card-text" style="margin-left: 20px;">Mapas personalizados de alta calidad en formato físico o digital</p>
+                  </div>
+                  </div>
+                </div>
+                </a>
+                </div>
+              </div>
+          </div>
+  
+      </div>
+      <hr class="red small-margin">
+            <div class="col-lg-3">
+        <a href="h_numeros.html" class="read-more">Volver</a>
+        </div>
+      
+    </div>
+  
+  
+    
+  </section>
 	
 	
 <footer class="site-footer">
