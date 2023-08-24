@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -14,7 +13,7 @@
 	<link rel="stylesheet" href="../fonts/icomoon/style.css">
 	<link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-	<link rel="stylesheet" href="../css/tiny-slider.css">
+	
 	<link rel="stylesheet" href="../css/aos.css">
 	<link rel="stylesheet" href="../css/glightbox.min.css">
 	<link rel="stylesheet" href="../css/style.css">
@@ -27,376 +26,263 @@
 	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 	crossorigin=""></script>
 
-    <script src="leaflet-search\src\leaflet-search.js"></script>
-<link rel="stylesheet" href="leaflet-search\src\leaflet-search.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
 
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
 
 		<script src="Leaflet.CountrySelect.js"></script>
 	
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-        <link rel="stylesheet" href="sidebar/css/leaflet-sidebar.css" />
+
 	<title>SIGEH | Gobierno del Estado de Hidalgo</title>
-
-    <style>
-        
-        .lorem {
-            font-style: italic;
-            color: #AAA;
-        }
-    </style>
-</head>
-<body onload="init()">
-
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-		  <div class="site-mobile-menu-close">
-			<span class="icofont-close js-menu-toggle"></span>
-		  </div>
-		  <img src="../images/logo_menu2.png" alt="Descripción de la imagen" class="mobile-menu-image">
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	  </div>
-	  
-	<nav class="site-nav nav-top" >
-		<div class="container" >
-			<div class="menu-bg-wrap" >
-				<div class="site-navigation">
-					<div class="row g-0 align-items-center">
-						<div class="col-2">
-							<a href="../index.html" class="logo m-0 float-start">
-								<img src="../images/logo_gobhidalgo.png" alt="Logo SIGEH" style="padding-bottom: 10px;">
-							  </a>							  
-						</div>
-					<!-- Este menú se muestra en pantallas de 600px o más -->
-<div class="col-8 text-right d-none d-sm-block">
-	<ul class="menu-derecha">
-	  <li><a href="https://ruts.hidalgo.gob.mx/">Trámites y Servicios</a></li>
-	  <li><a href="https://gobierno.hidalgo.gob.mx/">Gobierno</a></li>
-	  <li><a href="https://www.hidalgo.gob.mx/#buzon">Buzón Ciudadano</a></li>
-	  <li><a href="https://gobierno.hidalgo.gob.mx/AvisoPrivacidad">Aviso de privacidad</a></li>
-	</ul>
-  </div>
-  
-  <!-- Este menú se muestra en pantallas de menos de 600px -->
-  						  
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<nav class="site-nav nav-bottom" >
-		<div class="container">
-			<div class="menu-bg-wrap">
-				<div class="site-navigation">
-					<div class="row g-0 align-items-center">
-						<div class="col-2">
-							<a href="../index.html" class="logo m-0 float-start">SIGEH<span class="text-primary"></span></a>
-						</div>
-						<div class="col-8 text-center">
-							<!-- <form action="#" class="search-form d-inline-block d-lg-none">
-								<input type="text" class="form-control" placeholder="Search...">
-								<span class="bi-search"></span>
-							</form>-->
-
-							<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-								<li class="active"><a href="../index.html" class="subrayado">Inicio</a></li>
-								<li><a href="../h_productos.html#solicitud" class="subrayado">Solicitud de Productos</a></li>
-								<li class="has-children">
-									<a href="../h_mapas.html" class="subrayado">Mapas</a>
-									<ul class="dropdown">
-										<li>
-											<a href="../h_mapas.html" class="subrayado2">Hidalgo en Mapas</a>
-										</li>
-										<li ><a href="../search-result.html" style="color: orange; cursor:default;" class="subrayado2">Atlas interactivo del estado de Hidalgo</a></li>
-									</ul>
-								</li>
-								<li class="has-children">
-									<a class="subrayado">Estadísticas</a>
-									<ul class="dropdown">
-										<li><a href="../h_desempeño.html" class="subrayado2">Desempeño de Gobierno</a></li>
-										<ul class="dropdown"></ul>
-										<li class="has-children">				
-											<a href="../h_numeros.html" class="subrayado2">Hidalgo en Números</a>
-											<ul class="dropdown">
-												<li><a href="../h_tableros.html">Tableros dinámicos</a></li>
-												<li><a href="#">Infografías municipales</a></li>
-												<li><a href="../pags/bui.html">Banco único de Información Estadística</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li><a href="../h_normatividad.html" class="subrayado">Marco Normativo</a></li>
-								
-						</div>
-						<div class="col-2 text-end">
-							<a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
-								<span></span>
-							</a>
-							<!--<form action="#" class="search-form d-none d-lg-inline-block">
-								<input type="text" class="form-control" placeholder="Search...">
-								<span class="bi-search"></span>
-							</form>-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-
-    <div id="sidebar" class="sidebar collapsed">
-        <!-- Nav tabs -->
-        <div class="sidebar-tabs">
-            <ul role="tablist">
-                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
-                <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
-                <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
-                <li><a href="https://github.com/Turbo87/sidebar-v2" role="tab" target="_blank"><i class="fa fa-github"></i></a></li>
-            </ul>
-
-            <ul role="tablist">
-                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
-            </ul>
-        </div>
-
-        <!-- Tab panes -->
-        <div class="sidebar-content">
-            <div class="sidebar-pane" id="home">
-                <h1 class="sidebar-header">
-                    sidebar-v2
-                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
-                </h1>
-
-                <p>A responsive sidebar for mapping libraries like <a href="http://leafletjs.com/">Leaflet</a> or <a href="http://openlayers.org/">OpenLayers</a>.</p>
-
-                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-                <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            </div>
-
-            <div class="sidebar-pane" id="profile">
-                <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            </div>
-
-            <div class="sidebar-pane" id="messages">
-                <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            </div>
-
-            <div class="sidebar-pane" id="settings">
-                <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            </div>
-        </div>
-    </div>
-<div id="map" class="sidebar-map"></div>
-<a href="https://github.com/Turbo87/sidebar-v2/"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-
-
-
-	<footer class="site-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="widget">
-						<img src="../images/logo_gobhidalgo.png">
-					</div> <!-- /.widget -->
-					<div class="widget" style="text-align: center;">
-						<h3 >Social</h3>
-						<ul class="list-unstyled social">
-							<li><a href="https://www.facebook.com/profile.php?id=100069229599131"><span class="icon-facebook"></span></a></li>
-							<li><a href="https://twitter.com/gobiernohidalgo?s=20"><span class="icon-twitter"></span></a></li>
-						</ul>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-4 -->
-				<div class="col-lg-4 ps-lg-5">
-					<div class="widget">
-						<img src="../images/escudo_blanco.svg">
-						<p style="text-align: center;">© 2023 Gobierno del Estado de Hidalgo</p>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-4 -->
-				<div class="col-lg-4" style="text-align: center; font-weight: normal;">
-					<div class="widget">
-						<h2 class="mb-4">Contacto</h2>
-						<h3 style="font-weight: normal;">CITNOVA | EDIFICIO INNOVACIÓN <br><br>
-						<h3 style="font-weight: normal;">Boulevard Circuito La Concepción #3 <br>
-							Colonia La Concepción, CP 42162,<br>
-							San Agustín Tlaxiaca, Hidalgo</h3>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-4 -->
-			</div> <!-- /.row -->
-      </div> <!-- /.container -->
-    </footer> <!-- /.site-footer -->
-
-    <!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-    	<div class="spinner-border text-primary" role="status">
-    		<span class="visually-hidden">Loading...</span>
-    	</div>
-    </div>
-	<script src="../js/bootstrap.bundle.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script src="../dist/js/tabby.js"></script>
-    <script src="../js/tiny-slider.js"></script>
-
-    <script src="../js/flatpickr.min.js"></script>
-
-
-    <script src="../js/aos.js"></script>
-    <script src="../js/glightbox.min.js"></script>
-    <script src="../js/navbar.js"></script>
-    <script src="../js/counter.js"></script>
-    <script src="../js/custom.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-	<script>
-		var tabs = new Tabby('[data-tabs]');
-	</script>
-	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-    <script src="sidebar/js/leaflet-sidebar.js"></script>
-    <script>
-		$(document).ready(function() {
-  $(".dropdown-arrow").click(function() {
-    $(".menu-derecha").toggle(); // muestra u oculta el menú al hacer clic en la flecha
-  });
-});
-$('.dropdown-arrow').on('click', function() {
-  $('.menu-derecha').toggleClass('show');
-});
-	</script>
-<script src="capas/capas.js"></script>
-
-<script>
+	<style>
+		html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 	
-var map = L.map('map', {zoomControl: false}).setView([20.5791, -98.9621,], 9);
 
+}
 
-
-L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-var sidebar = L.control.sidebar('sidebar').addTo(map);
-
-L.control.zoom({
-     position: 'bottomleft'
-}).addTo(map);
-
-
-
-var geojsonLayer = L.geoJSON(municipios, {
-    style: function(feature) {
-        return {
-            fillColor: '#9f2241',  // color del relleno
-            fillOpacity: 0.6,  // transparencia del relleno (0-1)
-            color: 'white',  // color de la línea
-            weight: 1,  // grosor de la línea
-            opacity: 1  // transparencia de la línea (0-1)
-        };
-    },
-    onEachFeature: function(feature, layer) {
-		feature.layer=layer;
-        layer.on({
-            mouseover: function(e) {
-                var layer = e.target;
-                layer.setStyle({
-                    fillColor: '#ddc9a3',  // color del relleno al hacer hover
-                    color: 'white',  // color de la línea al hacer hover
-                });
-                layer.bindPopup(feature.properties.NOMGEO).openPopup();
-            },
-            mouseout: function(e) {
-                var layer = e.target;
-                geojsonLayer.resetStyle(layer);  // restablecer el estilo original
-                layer.closePopup();
-            },
-            click: function(e) {
-                // Abrir el PDF en una nueva ventana o pestaña
-                window.open(feature.properties.link);
-            }
-        });
-    }
-}).addTo(map);
-
-
-/*var searchControl = new L.Control.Search({
-       layer: geojsonLayer,
-       propertyName: 'NOMGEO',
-       circleLocation: true,
-       position: 'topright',
-	   collapsed: false,
-	   zoom:12,
-	   textPlaceholder:'                   Busca aquí algún municipio  ',
-       marker: {
-           circle: {
-               color: 'white',  // Color del borde del círculo
-               fillColor: 'white',  // Color de relleno del círculo
-               fillOpacity: 0.5,  // Opacidad del relleno
-               radius: 30  // Radio del círculo en pixeles
-           }
-       }
-});
-map.addControl(searchControl);*/
-
-//Lista desplegable
-var select = L.countrySelect();
-
-select.addTo(map);
+	</style>
+</head>
+<body>
+	<div class="container2">
+		<div class="head_map">
+			<img src="../images/logo_estrella.png" alt="Logo" class="logo">
+			<h1>Atlas interactivo del Estado de Hidalgo</h1>
+		</div>
+		<div class="Mapa" id="map"></div>
+		<div class="leyenda">
+			<div class="iconos1">
+				<div class="logo-div" style="border-top: 1px solid white;"><img src="../images/logos/ambiente.png" alt="Logo 1" class="icono"><span class="icon-text">Medio Ambiente</span></div>
+				<div class="logo-div"><img src="../images/logos/finanzas.png" alt="Logo 2" class="icono"><span class="icon-text">Desarrollo Económico</span></div>
+				<div class="logo-div"><img src="../images/logos/vivienda.png" alt="Logo 3" class="icono"><span class="icon-text">Población y vivienda</span></div>
+				<div class="logo-div"><img src="../images/logos/educacion.png" alt="Logo 4" class="icono"><span class="icon-text">Educación y cultura</span></div>
+				<div class="logo-div"><img src="../images/logos/l-04.png" alt="Logo 5" class="icono"><span class="icon-text">Infraestructura</span></div>
+				<div class="logo-div"><img src="../images/logos/movilidad.png" alt="Logo 6" class="icono"><span class="icon-text">Movilidad y transporte</span></div>
+				<div class="logo-div"><img src="../images/logos/proteccion.png" alt="Logo 7" class="icono"><span class="icon-text">Protección civil</span></div>
+				<div class="logo-div"><img src="../images/logos/seguridad.png" alt="Logo 8" class="icono"><span class="icon-text">Seguridad</span></div>
+				<div class="logo-div"><img src="../images/logos/salud.png" alt="Logo 9" class="icono"><span class="icon-text">Salud</span></div>
+				<div class="logo-div"><img src="../images/logos/social.png" alt="Logo 10" class="icono"><span class="icon-text">Desarrollo social</span></div>
+				<div class="logo-div"><img src="../images/logos/cultura.png" alt="Logo 11" class="icono"><span class="icon-text">Turismo</span></div>
+				<div class="logo-div"><img src="../images/logos/gobierno.png" alt="Logo 12" class="icono"><span class="icon-text">Gobierno y transparencia</span></div>
+			</div>
+			<div class="leyenda1">
+				<h2>Simbología</h2>
+				<div id="layer-control"></div>
+				<div id="map-legend"></div>
+			</div>
 			
-select.on('change', function(e){
-    if (e.feature === undefined){ // Do nothing on title
-        return;
+		</div>
+	</div>
+	
+	
+	  <script src="capas/capas.js"></script>
+	  <script>
+		  
+	  var map = L.map('map', {zoomControl: false}).setView([20.5791, -98.9621,], 9);
+	  
+	  
+	  
+	  L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+	  }).addTo(map);
+	  
+	  L.control.zoom({
+		   position: 'bottomleft'
+	  }).addTo(map);
+	  
+	  
+	  
+	  var geojsonLayer = L.geoJSON(municipios, {
+		  style: function(feature) {
+			  return {
+				  fillColor: '#9f2241',  // color del relleno
+				  fillOpacity: 0.8,  // transparencia del relleno (0-1)
+				  color: 'white',  // color de la línea
+				  weight: 1,  // grosor de la línea
+				  opacity: 1  // transparencia de la línea (0-1)
+			  };
+		  },
+		  onEachFeature: function(feature, layer) {
+			  feature.layer=layer;
+			  layer.on({
+				  mouseover: function(e) {
+					  var layer = e.target;
+					  layer.setStyle({
+						  fillColor: '#ddc9a3',  // color del relleno al hacer hover
+						  color: 'white',  // color de la línea al hacer hover
+					  });
+					  layer.bindPopup(feature.properties.NOMGEO).openPopup();
+				  },
+				  mouseout: function(e) {
+					  var layer = e.target;
+					  geojsonLayer.resetStyle(layer);  // restablecer el estilo original
+					  layer.closePopup();
+				  },
+				  click: function(e) {
+					  // Abrir el PDF en una nueva ventana o pestaña
+					  window.open(feature.properties.link);
+				  }
+			  });
+		  }
+	  }).addTo(map);
+	  
+	  
+	  /*var searchControl = new L.Control.Search({
+			 layer: geojsonLayer,
+			 propertyName: 'NOMGEO',
+			 circleLocation: true,
+			 position: 'topright',
+			 collapsed: false,
+			 zoom:12,
+			 textPlaceholder:'                   Busca aquí algún municipio  ',
+			 marker: {
+				 circle: {
+					 color: 'white',  // Color del borde del círculo
+					 fillColor: 'white',  // Color de relleno del círculo
+					 fillOpacity: 0.5,  // Opacidad del relleno
+					 radius: 30  // Radio del círculo en pixeles
+				 }
+			 }
+	  });
+	  map.addControl(searchControl);*/
+	  
+	  //Lista desplegable
+	  var select = L.countrySelect();
+	  
+	  select.addTo(map);
+				  
+	  select.on('change', function(e){
+		  if (e.feature === undefined){ // Do nothing on title
+			  return;
+		  }
+	  
+		  // Establece el estilo para la característica seleccionada
+		  var selectedStyle = {
+			  "color": "#bc955c",
+			  "weight": 10,
+			  "opacity": 0.9,
+			  "fill": false,       // No relleno
+			  "fillOpacity": 0 ,    // Relleno transparente
+		  };
+	  
+		  var country = L.geoJson(e.feature, {
+			  style: selectedStyle
+		  });
+	  
+		  // Elimina cualquier capa anterior antes de agregar la nueva
+		  if (this.previousCountry != null) {
+			  map.removeLayer(this.previousCountry);
+		  }
+		  
+		  this.previousCountry = country;
+	  
+		  // Agrega la característica al mapa y ajusta el zoom a sus límites
+		  country.addTo(map);
+		  map.fitBounds(country.getBounds());
+	  });
+	  
+	  document.addEventListener('DOMContentLoaded', (event) => {
+		  Swal.fire({
+			  title: 'Infografías Municipales',
+			  showClass: {
+				  popup: 'animate__animated animate__fadeInDown'
+			  },
+			  hideClass: {
+				  popup: 'animate__animated animate__fadeOutUp'
+			  },
+			  confirmButtonText: 'Entrar',
+			  confirmButtonColor: '#bc955c',   // color del botón
+			  background: 'linear-gradient(45deg,#691c32 , #9f2241',         // color de fondo del modal
+			  titleText: 'Bienvenido al Atlas interactivo del Estado de Hidalgo | Selecciona un sector de la columna izquierda para poder visualizar sus capas',            // color del texto del título
+		  })
+	  });
+	 // ... (tu código anterior) ...
+
+// Añadir control de capas
+var baseLayers = {
+    "OpenStreetMap": L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }),
+    "Terreno": L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+	maxZoom: 20,
+	attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}),
+    "Imágen satelital": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        subdomains: 'abcd',
+        minZoom: 1,
+        maxZoom: 16,
+        ext: 'jpg'
+    }),
+	"Noche": L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 20}),
+};
+
+
+var overlays = {
+    "Municipios": geojsonLayer
+};
+
+// Crear el control de capas y añadirlo al div "leyenda1"
+var layersControl = L.control.layers(baseLayers, overlays, {
+    collapsed: false
+}).addTo(map);
+
+document.querySelector('.leyenda1').appendChild(layersControl.getContainer());
+var capasTitle = document.createElement('div');
+capasTitle.innerHTML = '<strong>Capas</strong>';
+capasTitle.style.backgroundColor = '#691c32';
+capasTitle.style.color = 'white';
+capasTitle.style.padding = '5px 10px';
+capasTitle.style.borderTopLeftRadius = '4px';
+capasTitle.style.borderTopRightRadius = '4px';
+layersControl.getContainer().insertBefore(capasTitle, layersControl.getContainer().firstChild);
+
+// Añadir leyenda personalizada
+var legend = L.control({position: 'bottomleft'});
+
+legend.onAdd = function(map) {
+    var div = L.DomUtil.create('div', 'info legend');
+    div.innerHTML = '<strong>Simbología</strong><br><i style="background: #9f2241"></i> Municipios<br>';
+    return div;
+};
+
+legend.addTo(map);  // Añade la leyenda al mapa
+
+// Mueve el contenedor de la leyenda al div 'leyenda1'
+document.querySelector('.leyenda1').appendChild(legend.getContainer());
+
+// Mostrar la leyenda si la capa de municipios está activa al cargar el mapa
+if (map.hasLayer(geojsonLayer)) {
+    legend.getContainer().style.display = '';
+} else {
+    legend.getContainer().style.display = 'none';
+}
+
+// Mostrar la leyenda cuando la capa de municipios esté activa
+map.on('overlayadd', function(event) {
+    if (event.name === 'Municipios') {
+        legend.getContainer().style.display = '';
     }
+});
 
-    // Establece el estilo para la característica seleccionada
-    var selectedStyle = {
-        "color": "#bc955c",
-        "weight": 10,
-        "opacity": 0.9,
-        "fill": false,       // No relleno
-        "fillOpacity": 0 ,    // Relleno transparente
-    };
-
-    var country = L.geoJson(e.feature, {
-        style: selectedStyle
-    });
-
-    // Elimina cualquier capa anterior antes de agregar la nueva
-    if (this.previousCountry != null) {
-        map.removeLayer(this.previousCountry);
+// Ocultar la leyenda cuando la capa de municipios esté desactivada
+map.on('overlayremove', function(event) {
+    if (event.name === 'Municipios') {
+        legend.getContainer().style.display = 'none';
     }
-    
-    this.previousCountry = country;
-
-    // Agrega la característica al mapa y ajusta el zoom a sus límites
-    country.addTo(map);
-    map.fitBounds(country.getBounds());
 });
 
 
 
-/*document.addEventListener('DOMContentLoaded', (event) => {
-	Swal.fire({
-        title: 'Infografías Municipales',
-        showClass: {
-            popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-        },
-        confirmButtonText: 'Entendido',
-        confirmButtonColor: '#bc955c',   // color del botón
-        background: 'linear-gradient(45deg,#691c32 , #9f2241',         // color de fondo del modal
-        titleText: 'Bienvenido al Atlas interactivo del Estado de Hidalgo',            // color del texto del título
-    })
-});*/
 
-</script>	
-  </body>
-  </html>
+
+
+	  </script>	
+</body>
+</html>
