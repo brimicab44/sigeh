@@ -11086,6 +11086,7 @@ textarea {
   display: grid;
   grid-template-columns: 0.25fr 0.75fr;
   grid-template-rows: 1fr;
+  
 }
 
 
@@ -11152,9 +11153,10 @@ textarea {
 
 /* Estilo personalizado para el control de capas de Leaflet */
 .leyenda1 .leaflet-control-layers {
-  border: none;
+  border: 1px solid black;
   box-shadow: none;
   background: transparent;
+  margin-left: 20px;
 }
 
 .leyenda1 .leaflet-control-layers-toggle {
@@ -11172,12 +11174,13 @@ textarea {
 }
 
 .leyenda1 .leaflet-control-layers-list {
-  
   background-color: white;
-  border-radius: 4px;
+  
+  border-radius: 5px; /* Por ejemplo, un valor numérico que define el radio del borde redondeado */
   margin-top: 10px;
   margin-left: 20px;
 }
+
 
 .leyenda1 .leaflet-control-layers-separator {
   background-color: #691c32;
@@ -11237,5 +11240,14 @@ textarea {
 .logo-div:last-child {
   border-bottom: none;
 }
+.legend-image {
+  width: 20px;
+  height: 2px;
+  /* Otras propiedades de estilo según sea necesario */
+}
 
+.header-container {
+  text-align: center;
+  margin-top: 20px; /* Ajusta el margen superior según tu diseño */
+}
 
