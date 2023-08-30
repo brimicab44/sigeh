@@ -11056,16 +11056,23 @@ textarea {
 
 .head_map {
   grid-area: head_map;
-  background-color: #691c32;
+  background-image: linear-gradient(to bottom, #ddc9a3, white);
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+
 .head_map h1 {
-  color: white;
+  color: #691c32;
   font-size: 30px;
   margin-left: 20px; /* Aumenta el margen para un mejor espaciado */
+  margin-right: 20px;
   font-weight: 500; /* Peso de fuente más ligero */
 }
 
@@ -11091,12 +11098,15 @@ textarea {
 
 
 .iconos1 {
-  background-color: #691c32;
+  background-color: white;
   display: grid;
   grid-template-rows: repeat(12, 1fr); /* Divide en 12 partes iguales */
   gap: 10px; /* Espacio entre los logos, ajusta según necesidad */
   overflow-y: auto;
   padding: 10px; /* Padding para la lista de iconos */
+  min-width: 50px;
+  border: 1px solid #ddc9a3;
+  border-radius: 10px;
 }
 
 .logo-div {
@@ -11104,8 +11114,9 @@ textarea {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 2px; /* Puedes ajustar el padding según necesidad */
+  padding: 2px;
   transition: background-color 0.3s ease;
+  border-radius: 10px;
 }
 
 .icono {
@@ -11119,7 +11130,7 @@ textarea {
 .icon-text {
   display: none;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente negro */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro */
   color: white;
   padding: 5px;
   border-radius: 5px;
@@ -11153,10 +11164,12 @@ textarea {
 
 /* Estilo personalizado para el control de capas de Leaflet */
 .leyenda1 .leaflet-control-layers {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   box-shadow: none;
   background: transparent;
-  margin-left: 20px;
+  margin-left: 0px;
+  min-width: 100%;
+  height: auto;
 }
 
 .leyenda1 .leaflet-control-layers-toggle {
@@ -11178,7 +11191,7 @@ textarea {
   
   border-radius: 5px; /* Por ejemplo, un valor numérico que define el radio del borde redondeado */
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 
@@ -11233,7 +11246,7 @@ textarea {
   justify-content: center;
   overflow: hidden;
   padding: 2px;
-  border-bottom: 1px solid white;  /* Línea blanca delgada */
+  border-bottom: 1px solid #691c32  /* Línea blanca delgada */
 }
 
 /* Para asegurarnos de que el último elemento no tenga una línea en la parte inferior */

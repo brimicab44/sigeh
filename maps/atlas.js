@@ -3,9 +3,38 @@
 	  
 	  
 	  
-	  L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-	  }).addTo(map);
 	  
+
+	  var basemaps = [
+		L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+	maxZoom: 20,
+	attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	,label:'Terreno'
+}),
+		
+		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			minZoom: 1,
+			maxZoom: 16,
+			ext: 'jpg',
+			label:'Imágenes satelitales'
+		}),
+		L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+			subdomains: 'abcd',
+			maxZoom: 20,
+			minZoom: 0,
+			label: 'Open Street Map'
+		}),		
+	];
+	
+	map.addControl(L.control.basemaps({
+		basemaps: basemaps,
+		tileX: 0,  // tile X coordinate
+		tileY: 0,  // tile Y coordinate
+		tileZ: 1   // tile zoom level
+	}));
 	  L.control.zoom({
 		   position: 'bottomleft'
 	  }).addTo(map);
@@ -150,42 +179,33 @@ var municipalLayer = L.geoJSON(municipal, {
 	  });
 	 
 
-// Añadir control de capas
-var baseLayers = {
-    "OpenStreetMap": L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }),
-    "Terreno": L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-	maxZoom: 20,
-	attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}),
-    "Imágen satelital": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        subdomains: 'abcd',
-        minZoom: 1,
-        maxZoom: 16,
-        ext: 'jpg'
-    }),
-	"Noche": L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	subdomains: 'abcd',
-	maxZoom: 20}),
-};
 
+// Define tus capas en el formato del plugin Leaflet.StyledLayerControl
+var overlays = [
+	{
+	  groupName: "Información general", // Puedes ajustar el nombre del grupo
+	  expanded: true,
+	  layers: {
+		"Municipios": geojsonLayer,
+		"Localidades": localidadesLayer
+	  }
+	},
+	{
+	  groupName: "Red vial", // Puedes ajustar el nombre del grupo
+	  expanded: true,
+	  layers: {
+		"Red vial Federal": federalLayer,
+		"Red vial Estatal": estatalLayer,
+		"Red vial Municipal": municipalLayer
+	  }
+	}
+];
 
-var overlays = {
-    "Municipios": geojsonLayer,
-    "Localidades": localidadesLayer,
-	"Red vial Federal":federalLayer,
-	"Red vial Estatal": estatalLayer,
-	"Red vial Municipal": municipalLayer
-   
-};
-
-// Crear el control de capas y añadirlo al div "leyenda1"
-var layersControl = L.control.layers(baseLayers, overlays, {
-    collapsed: false
-}).addTo(map);
+  // Crea el StyledLayerControl y añádelo al mapa
+  var layersControl = L.Control.styledLayerControl(null, overlays, {
+	collapsed: false,
+	
+  }).addTo(map);
 
 document.querySelector('.leyenda1').appendChild(layersControl.getContainer());
 var capasTitle = document.createElement('div');
@@ -214,21 +234,21 @@ legendLocalidades.onAdd = function(map) {
 var legendFederal = L.control({position: 'bottomleft'});
 legendFederal.onAdd = function(map) {
     var div = L.DomUtil.create('div', 'info legend');
-    div.innerHTML = '<img class="legend-image" src="../images/iconos/federal.png"> Red vial Federal<br>';
+    div.innerHTML = '<i style="background: url(../images/iconos/federal.png) no-repeat center; background-size: contain;"></i> Red vial Federal<br>';
     return div;
 };
 
 var legendEstatal = L.control({position: 'bottomleft'});
 legendEstatal.onAdd = function(map) {
     var div = L.DomUtil.create('div', 'info legend');
-    div.innerHTML = '<img class="legend-image" src="../images/iconos/estatal.png"> Red vial Estatal<br>';
+    div.innerHTML = '<i style="background: url(../images/iconos/estatal.png) no-repeat center; background-size: contain;"></i> Red vial Estatal<br>';
     return div;
 };
 
 var legendMunicipal = L.control({position: 'bottomleft'});
 legendMunicipal.onAdd = function(map) {
     var div = L.DomUtil.create('div', 'info legend');
-    div.innerHTML = '<img class="legend-image" src="../images/iconos/municipal.png"> Red vial Municipal<br>';
+    div.innerHTML = '<i style="background: url(../images/iconos/municipal.png) no-repeat center; background-size: contain;"></i> Red vial Municipal<br>';
     return div;
 };
 
