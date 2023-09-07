@@ -52,7 +52,7 @@
 				  opacity: 1  // transparencia de la línea (0-1)
 			  };
 		  },
-		  onEachFeature: function(feature, layer) {
+/*		  onEachFeature: function(feature, layer) {
 			  feature.layer=layer;
 			  layer.on({
 				  mouseover: function(e) {
@@ -73,7 +73,7 @@
 					  window.open(feature.properties.link);
 				  }
 			  });
-		  }
+		  }*/
 	  }).addTo(map);
 	  
 	//Capa localidades
@@ -88,6 +88,38 @@ var localidadesLayer = L.geoJSON(localidades, {
             .bindPopup("Municipio: " + properties.Municipio +"<br>Localidad: " + properties.Loc +  "<br>Población Total: " + properties.Pob_tot);
     }
 });
+
+var iterloc1 = L.geoJSON(iter_loc, {
+    onEachFeature: function (feature, layer) {
+        // Crea un contenido HTML para el popup
+        var popupContent = '<div>';
+        
+        // Agrega el título que combina "NOM_LOC" y "NOM_MUN"
+        popupContent += '<h4>'+ feature.properties.NOMGEO + '</h4>';
+        
+        // Crea la tabla
+        popupContent += '<table>';
+        for (var key in feature.properties) {
+            if (feature.properties.hasOwnProperty(key)) {
+                popupContent += '<tr><td><b>' + key + ':</b></td><td>' + feature.properties[key] + '</td></tr>';
+            }
+        }
+        popupContent += '</table>';
+        popupContent += '</div>';
+
+        // Asigna el contenido del popup al polígono
+        layer.bindPopup(popupContent, {
+            width: '600px' // Ajusta el valor de "width" según el tamaño que desees para el popup
+        });
+    }
+}).addTo(map);
+
+
+
+
+
+
+
 
 //Capas redes viales
 var federalLayer = L.geoJSON(federal, {

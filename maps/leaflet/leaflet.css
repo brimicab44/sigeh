@@ -480,9 +480,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	position: absolute;
 	text-align: center;
 	margin-bottom: 20px;
+	max-width: 800px;
+	max-height: 600px;
+	overflow-y: auto;
+	
 	}
 .leaflet-popup-content-wrapper {
-	padding: 1px;
+	padding-right: 18px;
+	padding-top: 15px;
 	text-align: left;
 	border-radius: 12px;
 	width: auto; /* Cambia el ancho según tus necesidades */
@@ -529,19 +534,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	color: black;
 	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
 	}
+/* Estilo para el botón de cerrar */
 .leaflet-container a.leaflet-popup-close-button {
-	position: absolute;
-	top: 0;
-	right: 0;
-	border: none;
-	text-align: center;
-	width: 24px;
-	height: 24px;
-	font: 16px/24px Tahoma, Verdana, sans-serif;
-	color: white;
-	text-decoration: none;
-	background: transparent;
-	}
+    position: fixed;
+    top: 10px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+    right: 10px; /* Ajusta la distancia desde la derecha según tus necesidades */
+    border: none;
+    text-align: center;
+    width: 30px; /* Ancho del botón */
+    height: 30px; /* Altura del botón */
+    font: 20px/30px Tahoma, Verdana, sans-serif; /* Tamaño de fuente y alineación vertical */
+    color: #691c32; /* Color del botón */
+    text-decoration: none;
+    background: white; /* Fondo del botón */
+    border-radius: 50%; /* Forma circular para el botón */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
 .leaflet-container a.leaflet-popup-close-button:hover,
 .leaflet-container a.leaflet-popup-close-button:focus {
 	color: #585858;
@@ -664,3 +673,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
 		print-color-adjust: exact;
 		}
 	}
+/* Agrega bordes y líneas a la tabla en el popup */
+.leaflet-popup-content table {
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+    width: 100%; /* Ajusta el ancho de la tabla según tus necesidades */
+    border: 1px solid #000000; /* Añade un borde a la tabla */
+}
+
+.leaflet-popup-content th, .leaflet-popup-content td {
+    border: 1px solid #000000; /* Añade bordes a las celdas de la tabla */
+    padding: 8px; /* Añade espacio entre el contenido y los bordes de las celdas */
+    text-align: left; /* Alinea el texto a la izquierda en las celdas */
+}
