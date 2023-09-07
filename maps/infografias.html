@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -14,35 +13,29 @@
 	<link rel="stylesheet" href="../fonts/icomoon/style.css">
 	<link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-	<link rel="stylesheet" href="../css/tiny-slider.css">
+	
 	<link rel="stylesheet" href="../css/aos.css">
 	<link rel="stylesheet" href="../css/glightbox.min.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/flatpickr.min.css">
+	<link rel="stylesheet" type="text/css" href="../dist/css/tabby-ui.css">
 	
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="leaflet2/leaflet.js"></script>
+	<link rel="stylesheet" href="L.Control.Basemaps.css" />
 
-    <script src="leaflet-search\src\leaflet-search.js"></script>
-<link rel="stylesheet" href="leaflet-search\src\leaflet-search.css" />
+	<script src="L.Control.Basemaps.js"></script>
 
+<link rel="stylesheet" href="leaflet2/leaflet.css" />
 
 		<script src="Leaflet.CountrySelect.js"></script>
 	
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+		<link rel="stylesheet" href="layercontrol/css/styledLayerControl.css" />
+	<script src="layercontrol/src/styledLayerControl.js"></script>
+
 	<title>SIGEH | Gobierno del Estado de Hidalgo</title>
-	<style>
-		html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-	
 
-}
-
-	</style>
 </head>
 <body>
 
@@ -141,16 +134,11 @@
 			</div>
 		</div>
 	</nav>
-	<div id="myModal" class="modal">
-		<div class="modal-content">
-			<span class="close">&times;</span>
-			<p>Haz click en un municipio para ver su infografía</p>
-		</div>
+
+
+	<div class="section2">
+		<iframe src="https://sigeh.maps.arcgis.com/apps/instant/basic/index.html?appid=2112758d10a648fa933e44acfb271e3c" width="100%" height="700px" frameborder="0" style="border:0" allowfullscreen>No se admiten iFrames en esta página.</iframe>
 	</div>
-	
-<div id="map"></div>
-
-
 
 	<footer class="site-footer">
 		<div class="container">
@@ -193,11 +181,11 @@
     		<span class="visually-hidden">Loading...</span>
     	</div>
     </div>
-	<script src="../js/bootstrap.bundle.min.js"></script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	
-    <script src="../js/tiny-slider.js"></script>
+
 
     <script src="../js/flatpickr.min.js"></script>
 
@@ -220,127 +208,6 @@ $('.dropdown-arrow').on('click', function() {
 });
 	</script>
 <script src="capas/capas.js"></script>
-<script>
-	
-var map = L.map('map', {zoomControl: false}).setView([20.5791, -98.9621,], 8);
-
-
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-L.control.zoom({
-     position: 'bottomleft'
-}).addTo(map);
-
-
-
-var geojsonLayer = L.geoJSON(municipios, {
-    style: function(feature) {
-        return {
-            fillColor: '#9f2241',  // color del relleno
-            fillOpacity: 0.8,  // transparencia del relleno (0-1)
-            color: 'white',  // color de la línea
-            weight: 1,  // grosor de la línea
-            opacity: 1  // transparencia de la línea (0-1)
-        };
-    },
-    onEachFeature: function(feature, layer) {
-		feature.layer=layer;
-        layer.on({
-            mouseover: function(e) {
-                var layer = e.target;
-                layer.setStyle({
-                    fillColor: '#ddc9a3',  // color del relleno al hacer hover
-                    color: 'white',  // color de la línea al hacer hover
-                });
-                layer.bindPopup(feature.properties.NOMGEO).openPopup();
-            },
-            mouseout: function(e) {
-                var layer = e.target;
-                geojsonLayer.resetStyle(layer);  // restablecer el estilo original
-                layer.closePopup();
-            },
-            click: function(e) {
-                // Abrir el PDF en una nueva ventana o pestaña
-                window.open(feature.properties.link);
-            }
-        });
-    }
-}).addTo(map);
-
-
-/*var searchControl = new L.Control.Search({
-       layer: geojsonLayer,
-       propertyName: 'NOMGEO',
-       circleLocation: true,
-       position: 'topright',
-	   collapsed: false,
-	   zoom:12,
-	   textPlaceholder:'                   Busca aquí algún municipio  ',
-       marker: {
-           circle: {
-               color: 'white',  // Color del borde del círculo
-               fillColor: 'white',  // Color de relleno del círculo
-               fillOpacity: 0.5,  // Opacidad del relleno
-               radius: 30  // Radio del círculo en pixeles
-           }
-       }
-});
-map.addControl(searchControl);*/
-
-//Lista desplegable
-var select = L.countrySelect();
-
-select.addTo(map);
-			
-select.on('change', function(e){
-    if (e.feature === undefined){ // Do nothing on title
-        return;
-    }
-
-    // Establece el estilo para la característica seleccionada
-    var selectedStyle = {
-        "color": "#bc955c",
-        "weight": 10,
-        "opacity": 0.9,
-        "fill": false,       // No relleno
-        "fillOpacity": 0 ,    // Relleno transparente
-    };
-
-    var country = L.geoJson(e.feature, {
-        style: selectedStyle
-    });
-
-    // Elimina cualquier capa anterior antes de agregar la nueva
-    if (this.previousCountry != null) {
-        map.removeLayer(this.previousCountry);
-    }
-    
-    this.previousCountry = country;
-
-    // Agrega la característica al mapa y ajusta el zoom a sus límites
-    country.addTo(map);
-    map.fitBounds(country.getBounds());
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-	Swal.fire({
-        title: 'Infografías Municipales',
-        showClass: {
-            popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-        },
-        confirmButtonText: 'Entendido',
-        confirmButtonColor: '#bc955c',   // color del botón
-        background: 'linear-gradient(45deg,#691c32 , #9f2241',         // color de fondo del modal
-        titleText: 'Haz click en un municipio para abrir su infografía',            // color del texto del título
-    })
-});
-
-</script>	
+<script src="infografias.js"></script>	
   </body>
   </html>

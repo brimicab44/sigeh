@@ -9970,6 +9970,13 @@ textarea {
   right: 0;
   bottom: 0; }
 
+  .section2 {
+    padding-top: 4rem;
+    padding-bottom: 0rem; }
+    .section2 .heading {
+      font-size: 30px;
+      font-weight: 700; }
+
 .loader {
   z-index: 7700;
   position: fixed;
